@@ -63,33 +63,6 @@ class SMSBroadcastReceiver : BroadcastReceiver() {
         toast.show()
     }
 
-//    private fun showNotification(context: Context, numeroTelefone: String, mensagem: String) {
-//        val mBuilder = NotificationCompat.Builder(context)
-//        mBuilder.setSmallIcon(R.drawable.ic_launcher_foreground)
-//        mBuilder.color = 15869459
-//        mBuilder.setContentTitle("Mensagem de: " + numeroTelefone)
-//        mBuilder.setContentText(mensagem)
-//
-//
-//        val resultIntent = Intent(context, MainActivity::class.java)
-//
-//        resultIntent
-//            .putExtra("remetente", numeroTelefone)
-//            .putExtra("mensagem", mensagem)
-//
-//        val stackBuilder = TaskStackBuilder.create(context)
-//        stackBuilder.addParentStack(MainActivity::class.java)
-//
-//
-//        stackBuilder.addNextIntent(resultIntent)
-//        val resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
-//        mBuilder.setContentIntent(resultPendingIntent)
-//
-//        val mNotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-//
-//        // notificationID allows you to update the notification later on.
-//        mNotificationManager.notify(1, mBuilder.build())
-//    }
     private fun showNotification(context: Context, number: String, message: String) {
 
     notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
